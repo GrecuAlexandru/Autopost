@@ -170,3 +170,6 @@ def make_video(text, author):
     # deleteFile("auxxx.jpg")
     # deleteFile("output.mp4")
     # deleteFile("video_with_music.mp4")
+
+
+# cut_video("C:/Users/Alexandru/Desktop/Autopost/video_with_music.mp4", 15, "C:/Users/Alexandru/Desktop/Autopost/Output/final_video.mp4")
