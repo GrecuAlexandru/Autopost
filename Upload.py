@@ -72,7 +72,7 @@ class Upload:
             print("Video uploaded!")
         # input("Press any button to exit")
         time.sleep(120)
-        self.bot.close()
+        self.bot.quit()
 
     def createVideo(self, video_dir, startTime, endTime, text, author):
         video_dir = self.downloadIfYoutubeURL(video_dir)

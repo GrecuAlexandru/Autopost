@@ -13,9 +13,11 @@ class Bot:
 
     def getVideoUploadInput(self):
         # Click accept cookies
-        element = self.bot.execute_script("""return document.querySelector("tiktok-cookie-banner").shadowRoot.querySelector(".button-wrapper").querySelector("button")""")
-        element.click()
-
+        try:
+            element = self.bot.execute_script("""return document.querySelector("tiktok-cookie-banner").shadowRoot.querySelector(".button-wrapper").querySelector("button")""")
+            element.click()
+        except Exception as e:
+            print("")
         # Button is nested in iframe document. Select iframe first then select upload button
         WebDriverWait(self.bot, 20).until(EC.presence_of_element_located((By.TAG_NAME, "iframe")))
         self.bot.switch_to.frame(0)
